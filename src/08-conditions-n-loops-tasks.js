@@ -485,32 +485,8 @@ function getMatrixProduct(/* m1, m2 */) {
  *
  */
 
-function evaluateTicTacToePosition(position) {
-  const config = [
-    [1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]];
-  const arr = [].concat(...position);
-  const cross = [];
-  const zero = [];
-  arr.forEach((value, index) => {
-    if (value === 'X') {
-      cross.push(index + 1);
-    }
-    if (value === '0') {
-      zero.push(index + 1);
-    }
-  });
-  let winner;
-  config.forEach((value) => {
-    if (cross.indexOf(value[0]) !== -1 && cross.indexOf(value[1])
-      !== -1 && cross.indexOf(value[2]) !== -1) {
-      winner = 'X';
-    }
-    if (zero.indexOf(value[0]) !== -1 && zero.indexOf(value[1]) !== -1
-      && zero.indexOf(value[2]) !== -1) {
-      winner = '0';
-    }
-  });
-  return winner;
+function evaluateTicTacToePosition(/* position */) {
+  throw new Error('Not implemented');
 }
 
 
